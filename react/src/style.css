@@ -1,0 +1,8 @@
+@import 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=jet-brains-mono@400&display=swap';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply w-full;
+}
