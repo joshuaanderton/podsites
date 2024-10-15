@@ -7,9 +7,9 @@ window.Alpine = Alpine
 
 Alpine.store('audioPlayer', audioPlayer())
 
-Alpine.data('podcast', feedUrl => ({
+Alpine.data('podcast', () => ({
 
-  feedUrl: feedUrl,
+  feedUrl: import.meta.env.VITE_FEED_URL,
 
   selectedEpisode: null,
 
