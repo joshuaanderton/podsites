@@ -22,7 +22,8 @@
 
     /* Alias */
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "podcast-from-rss": ["../packages/podcast-from-rss"]
     },
   },
   "include": ["src"],

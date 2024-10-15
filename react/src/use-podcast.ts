@@ -6,7 +6,6 @@ export interface Episode {
   id: string
   title: string
   description: string
-  description_short: string
   link: string
   author: string
   published: string
@@ -15,7 +14,6 @@ export interface Episode {
   content_encoded: string
   itunes_duration: string
   itunes_episodeType: string
-  media: string
   audio: string|null
   category: string[]
   enclosures: {length: string, type: string, url: string}[]
