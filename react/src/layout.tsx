@@ -77,7 +77,6 @@ const Sidebar: React.FC<{ className?: string }> = ({ className }) => {
         <section>
           <Link to="/" aria-label="Homepage" className="relative mx-auto ring-1 ring-inset ring-black/10 block w-48 rounded-lg overflow-hidden bg-neutral-100 shadow-xl shadow-neutral-100 sm:w-64 lg:w-auto h-auto aspect-square">
             <img src={podcast?.image} width="960" height="960" className="w-full" />
-            <div className="absolute inset-0"></div>
           </Link>
         </section>
 
