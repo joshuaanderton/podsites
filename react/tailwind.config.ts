@@ -2,6 +2,10 @@ import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
+process.loadEnvFile('.env')
+
+var [primary, secondary] = (process.env.VITE_THEME_COLORS || '#F6BB43,#AF450E').split(',')
+
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -13,13 +17,7 @@ export default {
       spacing: {
         18: '4.5rem',
       },
-      colors: {
-        theme: {
-          500: '#F6BB43',
-          700: '#d3640c',
-          900: '#af450e',
-        }
-      },
+      colors: { primary, secondary },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -27,12 +25,12 @@ export default {
               color: 'inherit !important',
             },
             'a,button': {
-              color: theme('colors.theme[500]'),
+              color: theme('colors.primary'),
               fontWeight: 500,
               transitionProperty: 'color',
               textDecoration: 'none',
               '&:hover,&:active': {
-                color: theme('colors.theme[900]'),
+                color: theme('colors.secondary'),
               },
             },
           },
