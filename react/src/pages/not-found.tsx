@@ -18,7 +18,7 @@ export const NotFound: React.FC<{ code: 404 | 500 }> = ({ code }) => {
         <p className="font-mono text-4xl font-bold text-neutral-200">{code}</p>
         <h1 className="mt-4 text-lg font-bold">{title}</h1>
         <div className="mt-2 prose"><p>{message}</p></div>
-        <Link to="/" aria-label="Homepage" className="inline-block mt-4 text-sm font-bold leading-6 text-theme-500 hover:text-theme-700 active:text-theme-900">
+        <Link to="/" aria-label="Homepage" className="inline-block mt-4 text-sm font-bold leading-6 text-primary hover:text-secondary active:text-secondary">
           {'Go back home'}
         </Link>
       </div>

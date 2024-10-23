@@ -112,8 +112,8 @@ export function ProgressBar(
           className={clsx(
             'h-3 md:rounded-l-xl transition-colors',
             isFocusVisible || state.isThumbDragging(0)
-              ? 'bg-theme-500/50'
-              : 'bg-theme-500',
+              ? 'bg-primary/50'
+              : 'bg-primary',
           )}
           style={{
             width:

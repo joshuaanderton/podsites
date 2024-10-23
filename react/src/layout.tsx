@@ -115,7 +115,7 @@ const Sidebar: React.FC<{ className?: string }> = ({ className }) => {
                   title={`Subscribe via ${label}`}
                   aria-label={label}
                 >
-                  <Icon className="w-full h-auto fill-theme-500 group-hover:fill-theme-900 transition-colors" />
+                  <Icon className="w-full h-auto fill-primary group-hover:fill-secondary transition-colors" />
                   <span className="sr-only">{label}</span>
                 </a>
               </li>
