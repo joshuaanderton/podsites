@@ -1,5 +1,6 @@
 import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom'
 import { parse } from 'rss-to-json'
+import { feed as feedUrl } from '@/../settings.json'
 
 export interface Episode {
   id: string
@@ -30,8 +31,6 @@ export interface Podcast {
 }
 
 export const podcastLoader = async ({ params }: LoaderFunctionArgs): Promise<Podcast|null> => {
-
-  const feedUrl = import.meta.env.VITE_FEED_URL as string
 
   if (!feedUrl) {
     throw new Error('Feed URL not set')

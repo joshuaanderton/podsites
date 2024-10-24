@@ -1,0 +1,14 @@
+{
+  "feed": "https://feeds.transistor.fm/no-plans-to-merge",
+  "colors": {
+    "primary": "#F44ACD",
+    "secondary": "#D923AE"
+  },
+  "links": {
+    "rss": "https://feeds.transistor.fm/no-plans-to-merge",
+    "applePodcasts": "https://podcasts.apple.com/us/podcast/no-plans-to-merge/id1455034944?uo=4",
+    "spotify": "https://open.spotify.com/show/7hp71gdn2CVLov1qcfrXGp?si=4645ba7e25ce442d",
+    "overcast": "https://overcast.fm/itunes1455034944",
+    "pocketCasts": "https://pca.st/itunes/1455034944"
+  }
+}

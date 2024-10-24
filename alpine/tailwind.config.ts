@@ -1,9 +1,6 @@
 import typographyPlugin from '@tailwindcss/typography'
 import { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import process from 'node:process'
-
-var [primary, secondary] = (process.env.VITE_THEME_COLORS || '#F6BB43,#AF450E').split(',')
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts}'],
@@ -13,10 +10,13 @@ export default {
         sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
         mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
+      colors: {
+        primary: 'var(--color-primary, rgba(0, 0, 0, 1))',
+        secondary: 'var(--color-secondary, rgba(0, 0, 0, .5))',
+      },
       spacing: {
         18: '4.5rem',
       },
-      colors: { primary, secondary },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -24,10 +24,10 @@ export default {
               color: 'inherit !important',
             },
             'a,button': {
-              color: theme('colors.primary'),
               fontWeight: 500,
               transitionProperty: 'color',
               textDecoration: 'none',
+              color: theme('colors.primary'),
               '&:hover,&:active': {
                 color: theme('colors.secondary'),
               },
