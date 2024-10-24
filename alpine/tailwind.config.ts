@@ -1,9 +1,7 @@
 import typographyPlugin from '@tailwindcss/typography'
 import { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import process, { loadEnvFile } from 'node:process'
-
-loadEnvFile('.env')
+import process from 'node:process'
 
 var [primary, secondary] = (process.env.VITE_THEME_COLORS || '#F6BB43,#AF450E').split(',')
 
