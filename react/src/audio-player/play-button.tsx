@@ -13,7 +13,7 @@ export function PlayButton({ episode, playing, paused, ...props }: Props) {
 
   props.className = clsx(props.className, (playing || paused) ? null : [
     'group relative flex size-10 md:size-14 m-[0.25rem] flex-shrink-0 items-center justify-center rounded-full',
-    'bg-neutral-700 hover:bg-secondary focus:outline-none focus:ring focus:ring-primary/50 focus:ring-offset-4',
+    'bg-neutral-700 hover:bg-secondary focus:outline-none focus:ring focus:ring-offset-4',
     '[&_svg]:size-[50%] [&_svg]:fill-white [&:active_svg]:fill-white/80',
   ])
 

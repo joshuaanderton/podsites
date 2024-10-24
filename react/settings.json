@@ -1,0 +1,14 @@
+{
+  "feed": "https://feeds.transistor.fm/build-your-saas",
+  "colors": {
+    "primary": "#FCC853",
+    "secondary": "#F9AA26"
+  },
+  "links": {
+    "rss": "https://feeds.transistor.fm/build-your-saas",
+    "applePodcasts": "https://podcasts.apple.com/us/podcast/build-your-saas/id1357295850",
+    "spotify": "https://open.spotify.com/show/5VxoFJobBSu0yWo2r891ec",
+    "overcast": "https://overcast.fm/itunes1357295850/build-your-saas",
+    "pocketCasts": "http://pca.st/gHig"
+  }
+}

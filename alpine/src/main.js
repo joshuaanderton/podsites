@@ -1,7 +1,13 @@
 import Alpine from 'alpinejs'
 import { parse } from 'rss-to-json'
 import audioPlayer from './audio-player'
-import './app.css'
+import rssSvg from './svg/rss.svg?raw'
+import applePodcastsSvg from './svg/apple-podcasts.svg?raw'
+import spotifySvg from './svg/spotify.svg?raw'
+import overcastSvg from './svg/overcast.svg?raw'
+import pocketCastsSvg from './svg/pocket-casts.svg?raw'
+import settings from '../settings.json'
+import './style.css'
 
 window.Alpine = Alpine
 
@@ -9,7 +15,15 @@ Alpine.store('audioPlayer', audioPlayer())
 
 Alpine.data('podcast', () => ({
 
-  feedUrl: import.meta.env.VITE_FEED_URL,
+  feedUrl: settings.feed,
+
+  subscribeLinks: [
+    { title: 'RSS Feed', icon: rssSvg, url: settings.links.rss },
+    { title: 'Apple Podcast', icon: applePodcastsSvg, url: settings.links.applePodcasts },
+    { title: 'Spotify', icon: spotifySvg, url: settings.links.spotify },
+    { title: 'Overcast', icon: overcastSvg, url: settings.links.overcast },
+    { title: 'Pocket Casts', icon: pocketCastsSvg, url: settings.links.pocketCasts }
+  ],
 
   podcast: null,
 
@@ -73,6 +87,10 @@ Alpine.data('podcast', () => ({
   },
 
   init() {
+    const root = document.documentElement
+    root.style.setProperty('--color-primary', settings.colors.primary)
+    root.style.setProperty('--color-secondary', settings.colors.secondary)
+
     try {
       this.loadFeed()
     } catch (err) {

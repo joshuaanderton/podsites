@@ -110,10 +110,8 @@ export function ProgressBar(
       >
         <div
           className={clsx(
-            'h-3 md:rounded-l-xl transition-colors',
-            isFocusVisible || state.isThumbDragging(0)
-              ? 'bg-primary/50'
-              : 'bg-primary',
+            'h-3 md:rounded-l-xl transition-colors text-primary bg-current',
+            isFocusVisible || state.isThumbDragging(0) ? 'opacity-50' : ''
           )}
           style={{
             width:
